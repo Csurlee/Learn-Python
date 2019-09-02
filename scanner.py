@@ -9,7 +9,7 @@ import utils.prettytable
 
 from prettytable import PrettyTable
 
-path = Path('/home/csurlee/Desktop')
+path = Path('/path/to/folder')
 path_list= Path('list.txt')
 
 pt = PrettyTable()
