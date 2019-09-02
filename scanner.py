@@ -1,3 +1,7 @@
+# this pyton file scans a folder and creates a txt file with the list of files path, date when created was and size
+
+
+
 from pathlib import Path
 import datetime
 import utils.prettytable
