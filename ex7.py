@@ -16,7 +16,7 @@ end9 = "r"
 end10 = "g"
 end11 = "e"
 end12 = "r" # Variable xcyxcyxc
-end13 = "1"
+end13 = "11"
 
 # Printing the Variables
 # The end=' ' is for SPACE CHEESEend=' 'BURGER = CHEESE BURGER
