@@ -22,13 +22,13 @@ def secret_formula(started):
 
 
 five = 10 - 2 + 3 - 6
-print(f"This shoul be five: {five}")
+print(f"This should be five: {five}")
 
 start_point = 10000
 beans, jars, crates = secret_formula(start_point)
 
 print("with starting point of: {}".format(start_point))
-print(f"We#d have beans {beans}, {jars} and {crates} crates")
+print(f"We'd have beans {beans}, {jars} and {crates} crates")
 
 start_point = start_point / 10
 
