@@ -1,16 +1,11 @@
-# this pyton file scans a folder and creates a txt file with the list of files path, date when created was and size
-# using PrettyTable
-
-
+#!/usr/bin/python3.6
 
 from pathlib import Path
 import datetime
-import utils.prettytable
-
-
 from prettytable import PrettyTable
 
-path = Path('/path/to/folder')
+path = Path('/Dev/python3/python3_the_hard_way/Python')
+print(path)
 path_list= Path('list.txt')
 
 pt = PrettyTable()
