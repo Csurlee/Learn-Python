@@ -24,3 +24,7 @@ if people <= dogs:
 
 if people == dogs:
 	print("People are dogs")
+
+
+if people < cats:
+    print("Too many cat! The world is doomed!")
