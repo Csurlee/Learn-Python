@@ -1,5 +1,5 @@
 
-## Study Drills #1
+## Study Drills 
 
 
 i = 0
