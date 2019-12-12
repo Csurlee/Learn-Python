@@ -121,30 +121,30 @@ def right_room():
 def front_room():
 	print("You go to front")
 	print("Now open the door")
+	lock = [10, 15, 33]
 
 	choise = input("> ")
 
 	if choise == "open":
-		print("You are now in the front room.")
-		print("In front of you is a WHITE MONSTER. what do you do?")
+		print("Ohh man... The door is locked.")
+		print("To open you must type the right number.")
+		print("Choose from this numbers", lock)
 		monster_moved = False
 		
+
 		while True:
 			choise = input("> ")
 
-			if choise == "going home":
-				dead("The monster looks at you and slaps your face off.")
-			elif choise == "slap" and not monster_moved:
+			
+			if choise == lock[1] and not monster_moved:
 				print("The monster has moved from the door.")
 				print("You can go through now.")
 				monster_moved = True
-			elif choise == "slap" and monster_moved:
-				dead("The monster get pissed off and slaps you in the face.")
+				
 			elif choise == "go" and monster_moved:
 				reward_room()
 			else:
-				print("I got no idea what that means.")
-				help()
+				print("Wrong number. Please try another one.")
 
 
 def back_room():
