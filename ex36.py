@@ -46,20 +46,20 @@ def left_room():
 	if choise == "open":
 		print("You are now in the left room.")
 		print("In front of you is a BLACK MONSTER. what do you do?")
-		bmonster_moved = False
+		monster_moved = False
 
 		while True:
 			choise = input("> ")
 
 			if choise == "going home":
 				dead("The monster looks at you and slaps your face off.")
-			elif choise == "taunt monster" and not bmonster_moved:
+			elif choise == "taunt monster" and not monster_moved:
 				print("The monster has moved from the door.")
 				print("You can go through now.")
-				bmonster_moved = True
-			elif choise == "taunt monster" and bmonster_moved:
+				monster_moved = True
+			elif choise == "taunt monster" and monster_moved:
 				dead("The monster get pissed off and slaps you in the face.")
-			elif choise == "go" and bmonster_moved:
+			elif choise == "go" and monster_moved:
 				reward_room()
 			else:
 				print("I got no idea what that means.")
@@ -68,15 +68,90 @@ def left_room():
 
 
 def right_room():
-	print("right")
+	print("You go right")
+	print("Now open the door")
+
+	choise = input("> ")
+
+	if choise == "open":
+		print("You are now in the right room.")
+		print("In front of you is a RED MONSTER. what do you do?")
+		monster_moved = False
+		
+		while True:
+			choise = input("> ")
+
+			if choise == "going home":
+				dead("The monster looks at you and slaps your face off.")
+			elif choise == "taunt monster" and not monster_moved:
+				print("The monster has moved from the door.")
+				print("You can go through now.")
+				monster_moved = True
+			elif choise == "taunt monster" and monster_moved:
+				dead("The monster get pissed off and slaps you in the face.")
+			elif choise == "go" and monster_moved:
+				reward_room()
+			else:
+				print("I got no idea what that means.")
+				help()
 
 
 def front_room():
-	print("front")
+	print("You go to front")
+	print("Now open the door")
+
+	choise = input("> ")
+
+	if choise == "open":
+		print("You are now in the front room.")
+		print("In front of you is a WHITE MONSTER. what do you do?")
+		monster_moved = False
+		
+		while True:
+			choise = input("> ")
+
+			if choise == "going home":
+				dead("The monster looks at you and slaps your face off.")
+			elif choise == "taunt monster" and not monster_moved:
+				print("The monster has moved from the door.")
+				print("You can go through now.")
+				monster_moved = True
+			elif choise == "taunt monster" and monster_moved:
+				dead("The monster get pissed off and slaps you in the face.")
+			elif choise == "go" and monster_moved:
+				reward_room()
+			else:
+				print("I got no idea what that means.")
+				help()
 
 
 def back_room():
-	print("back")
+	print("You go back")
+	print("Now open the door")
+
+	choise = input("> ")
+
+	if choise == "open":
+		print("You are now in the left room.")
+		print("In front of you is a BLUE MONSTER. what do you do?")
+		monster_moved = False
+		
+		while True:
+			choise = input("> ")
+
+			if choise == "going home":
+				dead("The monster looks at you and slaps your face off.")
+			elif choise == "taunt monster" and not monster_moved:
+				print("The monster has moved from the door.")
+				print("You can go through now.")
+				monster_moved = True
+			elif choise == "taunt monster" and monster_moved:
+				dead("The monster get pissed off and slaps you in the face.")
+			elif choise == "go" and monster_moved:
+				reward_room()
+			else:
+				print("I got no idea what that means.")
+				help()
 
 
 def dead(why):
@@ -91,7 +166,8 @@ def reward_room():
 	try:
 		how_much = int(input("> "))
 	except:
-		dead("Man, learn to type a number")
+		print("Man, learn to type a number")
+		reward_room()
 
 	if how_much < 100:
 		print("Nice, you're not greedy, you win! Now open the door and leave.")
