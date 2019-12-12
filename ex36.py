@@ -1,6 +1,28 @@
 from sys import exit
 
 
+def help():
+	print("""
+		Please use this commands:
+		- Open a door: 'open'
+		- To go left: 'left'
+		- To go right: 'right'
+		- To go front: 'front'
+		- To go back: 'back'
+		- Go through the room: 'go'
+		
+		MONSTER:
+		- Slap the Monster: 'slap'
+		- Slap the Monster again: 'slap'
+		- You are scared: 'going home'
+		""")
+	
+
+def dead(why):
+	print(why, "You're dead!")
+	exit(0)
+
+
 def start():
 	print("You are at front of a door.")
 	print("Go inside typing 'start'")
@@ -53,11 +75,11 @@ def left_room():
 
 			if choise == "going home":
 				dead("The monster looks at you and slaps your face off.")
-			elif choise == "taunt monster" and not monster_moved:
+			elif choise == "slap" and not monster_moved:
 				print("The monster has moved from the door.")
 				print("You can go through now.")
 				monster_moved = True
-			elif choise == "taunt monster" and monster_moved:
+			elif choise == "slap" and monster_moved:
 				dead("The monster get pissed off and slaps you in the face.")
 			elif choise == "go" and monster_moved:
 				reward_room()
@@ -83,11 +105,11 @@ def right_room():
 
 			if choise == "going home":
 				dead("The monster looks at you and slaps your face off.")
-			elif choise == "taunt monster" and not monster_moved:
+			elif choise == "slap" and not monster_moved:
 				print("The monster has moved from the door.")
 				print("You can go through now.")
 				monster_moved = True
-			elif choise == "taunt monster" and monster_moved:
+			elif choise == "slap" and monster_moved:
 				dead("The monster get pissed off and slaps you in the face.")
 			elif choise == "go" and monster_moved:
 				reward_room()
@@ -112,11 +134,11 @@ def front_room():
 
 			if choise == "going home":
 				dead("The monster looks at you and slaps your face off.")
-			elif choise == "taunt monster" and not monster_moved:
+			elif choise == "slap" and not monster_moved:
 				print("The monster has moved from the door.")
 				print("You can go through now.")
 				monster_moved = True
-			elif choise == "taunt monster" and monster_moved:
+			elif choise == "slap" and monster_moved:
 				dead("The monster get pissed off and slaps you in the face.")
 			elif choise == "go" and monster_moved:
 				reward_room()
@@ -141,11 +163,11 @@ def back_room():
 
 			if choise == "going home":
 				dead("The monster looks at you and slaps your face off.")
-			elif choise == "taunt monster" and not monster_moved:
+			elif choise == "slap" and not monster_moved:
 				print("The monster has moved from the door.")
 				print("You can go through now.")
 				monster_moved = True
-			elif choise == "taunt monster" and monster_moved:
+			elif choise == "slap" and monster_moved:
 				dead("The monster get pissed off and slaps you in the face.")
 			elif choise == "go" and monster_moved:
 				reward_room()
@@ -154,9 +176,6 @@ def back_room():
 				help()
 
 
-def dead(why):
-	print(why, "You're dead!")
-	exit(0)
 
 
 def reward_room():
@@ -190,19 +209,6 @@ def reward_room():
 
 
 
-def help():
-	print("""Please use this commands:
-		- Open a door: open
-		- To go left: left
-		- To go right: right
-		- To go front: front
-		- To go back: back
-		- Go through the room now: go
-		MONSTER:
-		- taunt monster
-		- going home
-		""")
-	
 
 
 
