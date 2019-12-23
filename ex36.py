@@ -135,10 +135,12 @@ def front_room():
 
 		while True:
 			
-			choise = input("> ")
-
+			choise = input("> "	)
+			i = lock[1]
+			print(">>> i ==", i)
+			print(">>> monster_moved ==", monster_moved)
 			
-			if choise == lock[1]:
+			if choise == i and not monster_moved:
 				print("The monster has moved from the door.")
 				print("You can go through now.")
 				monster_moved = True
