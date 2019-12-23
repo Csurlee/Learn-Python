@@ -1,4 +1,3 @@
-mylist = []
-for i in '1235456':
-	mylist.append(i)
-print(mylist)
+my_list = ['geeks', 'for'] 
+my_list.append('geeks') 
+print(my_list) 

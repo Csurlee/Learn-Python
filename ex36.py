@@ -1,4 +1,5 @@
 from sys import exit
+from sys import exit
 
 
 def help():
@@ -121,11 +122,12 @@ def right_room():
 def front_room():
 	print("You go to front")
 	print("Now open the door")
-	lock = [10, 15, 33]
+	
 
 	choise = input("> ")
 
 	if choise == "open":
+		lock = [10, 15, 33]
 		print("Ohh man... The door is locked.")
 		print("To open you must type the right number.")
 		print("Choose from this numbers", lock)
@@ -133,10 +135,11 @@ def front_room():
 		
 
 		while True:
+			
 			choise = input("> ")
 
 			
-			if choise == lock[1] and not monster_moved:
+			if choise == lock.append(1) and not monster_moved:
 				print("The monster has moved from the door.")
 				print("You can go through now.")
 				monster_moved = True
@@ -145,6 +148,7 @@ def front_room():
 				reward_room()
 			else:
 				print("Wrong number. Please try another one.")
+				print(lock)
 
 
 def back_room():
