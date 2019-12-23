@@ -138,7 +138,7 @@ def front_room():
 			choise = input("> ")
 
 			
-			if choise == lock.append(1) and not monster_moved:
+			if choise == lock[1]:
 				print("The monster has moved from the door.")
 				print("You can go through now.")
 				monster_moved = True
