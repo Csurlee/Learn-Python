@@ -127,6 +127,7 @@ def front_room():
 
 	if choise == "open":
 		lock = [10, 15, 33]
+		
 		print("Ohh man... The door is locked.")
 		print("To open you must type the right number.")
 		print("Choose from this numbers", lock)
@@ -137,6 +138,7 @@ def front_room():
 			
 			choise = input("> "	)
 			i = lock[1]
+
 			print(">>> i ==", i)
 			print(">>> monster_moved ==", monster_moved)
 			
