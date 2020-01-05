@@ -207,10 +207,10 @@ def reward_room():
 			print("You are penalized for wrong answer. You start from the beginning.")
 			start()
 	else:
-		print("====================================================================")
+		print("=" * 100)
 		print("| You are greedy, you can not open the door. You're hands are full.|")
 		print("| You start from the beginning.                                    |")
-		print("====================================================================")
+		print("=" * 100)
 		start()		
 
 
