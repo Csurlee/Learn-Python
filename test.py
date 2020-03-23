@@ -1,4 +1,7 @@
-ten_things = "Apples Oranges Crows Telephone Light Sugar"
-stuff = ten_things.split()
-
-print(stuff)
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x, y in thisdict.items():
+  print(x, '<<<>>>', y)
