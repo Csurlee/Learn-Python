@@ -21,7 +21,11 @@ bulls_on_parade = Song(["They rally around tha family",
 						"With pockets full of shells"])
 
 easter_day.sing_me_a_song()
+
 separator.sing_me_a_song()
+
 happy_bday.sing_me_a_song()
+
 separator.sing_me_a_song()
+
 bulls_on_parade.sing_me_a_song()
